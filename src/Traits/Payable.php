@@ -71,7 +71,7 @@ trait Payable
         return $link->url;
     }
 
-    public function pay($amount, $currency): Transfer
+    public function transfer($amount, $currency): Transfer
     {
         // TODO: capture this in the database, which may allow us to do a reversal later
         return static::$stripe->transfers->create([
