@@ -83,7 +83,7 @@ trait Payable
 
     public function getAccountBalance(): Balance
     {
-        return static::$stripe->balance->retrieve([
+        return static::$stripe->balance->retrieve([], [
             'stripe_account' => $this->getStripeAccountId(),
         ]);
     }
