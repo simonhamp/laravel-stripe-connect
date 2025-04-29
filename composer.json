@@ -1,46 +1,46 @@
 {
-    "name": "simonhamp/laravel-stripe-connect",
-    "type": "library",
-    "keywords": [
-        "laravel",
-        "stripe",
-        "billing"
-    ],
-    "require": {
-        "illuminate/database": "^10.0|^11.0",
-        "illuminate/support": "^10.0|^11.0",
-        "stripe/stripe-php": ">=10.0"
+  "name": "simonhamp/laravel-stripe-connect",
+  "type": "library",
+  "keywords": [
+    "laravel",
+    "stripe",
+    "billing"
+  ],
+  "require": {
+    "illuminate/database": "^10.0|^11.0|^12.0",
+    "illuminate/support": "^10.0|^11.0|^12.0",
+    "stripe/stripe-php": ">=10.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SimonHamp\\LaravelStripeConnect\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SimonHamp\\LaravelStripeConnect\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SimonHamp\\LaravelStripeConnect\\ServiceProvider"
+      ]
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "rap2h",
+      "email": "raphaelht@gmail.com"
     },
-    "require-dev": {
-        "phpunit/phpunit": "^10.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "SimonHamp\\LaravelStripeConnect\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "SimonHamp\\LaravelStripeConnect\\Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "SimonHamp\\LaravelStripeConnect\\ServiceProvider"
-            ]
-        }
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "rap2h",
-            "email": "raphaelht@gmail.com"
-        },
-        {
-            "name": "Simon Hamp",
-            "email": "simon.hamp@me.com"
-        }
-    ],
-    "minimum-stability": "stable"
+    {
+      "name": "Simon Hamp",
+      "email": "simon.hamp@me.com"
+    }
+  ],
+  "minimum-stability": "stable"
 }
