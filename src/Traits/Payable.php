@@ -111,4 +111,14 @@ trait Payable
     {
         return Config::get('stripe_connect.payable.account_status_column');
     }
+
+    public function getExpressDashboardLink()
+    {
+        return static::$stripe->accounts->createLoginLink($this->getStripeAccountId())->url;
+    }
+
+    public function canAcceptCapability(string $capability = 'transfers')
+    {
+        return static::$stripe->accounts->retrieveCapability($this->getStripeAccountId(), $capability)->status === 'active';
+    }
 }
